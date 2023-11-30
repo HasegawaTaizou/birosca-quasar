@@ -1,1 +1,7 @@
-/* app global css */
+:root {
+  --primary-color: #e24b1c;
+  --text-color: #000000;
+  --background-color: #fafafa;
+  --stroke-color: #d3d3d3;
+  --button-border-radius: 10px;
+}
