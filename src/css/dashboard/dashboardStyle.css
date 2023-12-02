@@ -1,0 +1,5 @@
+.q-router-link--active {
+  color: var(--primary-color);
+  border-right: 6px solid var(--primary-color);
+  background-color: var(--background-color);
+}

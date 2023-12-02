@@ -1,10 +1,12 @@
-import MainLayoutVue from "src/pages/MainLayout.vue";
+const MainLayoutVue = () => import("src/pages/MainLayout.vue");
 
 //Dashboard
-import Dashboard from "src/pages/dashboard/Dashboard.vue";
+const Dashboard = () => import("src/pages/dashboard/Dashboard.vue");
+const Foods = () => import("src/pages/dashboard/Foods.vue");
+const Orders = () => import("src/pages/dashboard/Orders.vue");
 
 //Catch All
-import ErrorNotFoundVue from "pages/ErrorNotFound.vue";
+const ErrorNotFoundVue = () => import("pages/ErrorNotFound.vue");
 
 const routes = [
   {
@@ -14,6 +16,16 @@ const routes = [
   {
     path: "/dashboard",
     component: Dashboard,
+    children: [
+      {
+        path: "foods",
+        component: Foods,
+      },
+      {
+        path: "orders",
+        component: Orders,
+      },
+    ],
   },
 
   // Always leave this as last one,
