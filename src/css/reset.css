@@ -53,3 +53,8 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
+/* QUASAR RESET */
+.q-btn .q-focus-helper {
+  display: none;
+}
