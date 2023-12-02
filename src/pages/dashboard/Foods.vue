@@ -64,5 +64,5 @@ export default {
 </script>
 
 <style scoped>
-@import url("../../css/dashboard/foods/foodsStyle.css");
+@import url("../../assets/css/dashboard/foods/foodsStyle.css");
 </style>

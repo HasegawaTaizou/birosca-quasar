@@ -69,9 +69,9 @@ export default {
 </script>
 
 <style>
-@import url("../../css/dashboard/dashboardStyle.css");
+@import url("../../assets/css/dashboard/dashboardStyle.css");
 </style>
 
 <style module>
-@import url("../../css/dashboard/sidebarStyle.css");
+@import url("../../assets/css/dashboard/sidebarStyle.css");
 </style>
