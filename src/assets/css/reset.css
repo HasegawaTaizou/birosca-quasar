@@ -22,10 +22,13 @@ html {
 button {
   outline: 0;
   cursor: pointer;
-  border: var(--button-border);
   color: var(--text-color);
-  background-color: transparent;
-  font-family: "Cabin", sans-serif;
+  border-radius: var(--border-radius) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  font-family: Poppins !important;
+  line-height: 0 !important;
+  padding: 0 !important;
 }
 
 input {

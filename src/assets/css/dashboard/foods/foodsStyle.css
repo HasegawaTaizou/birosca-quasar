@@ -1,5 +1,11 @@
+.foods-title {
+  padding-top: 12px;
+  padding-left: 48px;
+}
+
 .foods__options {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -19,9 +25,115 @@
   font-size: 1.25rem;
 }
 
-.add-food__button {
+.foods-container {
+  display: flex;
+  gap: 38px;
+  padding-top: 58px;
+  padding-left: 48px;
+}
+
+.food-container {
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+  background-color: var(--background-color);
+  max-width: 462px;
+  width: 100%;
+  min-height: 404px;
+  border-radius: var(--border-radius);
+  display: grid;
+  grid-template-areas:
+    "image main"
+    "ingredients ingredients";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 24px 34px;
+  gap: 32px;
+  position: relative;
+}
+
+.food__image {
+  grid-area: image;
+  width: 182px;
+  height: 182px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.food__main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.food__name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  max-width: 192px;
+}
+
+.food__price {
+  color: var(--primary-color);
+  font-size: 1.625rem;
+  font-weight: 700;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.food__ingredients-container {
+  grid-area: ingredients;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.ingredients-body {
+  display: flex;
+  gap: 18px;
+}
+
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 160px;
+}
+
+.ingredient {
+  display: flex;
+  align-items: center;
+}
+
+.ingredient::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-color);
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+.food__button-delete {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  width: 178px;
+  height: 40px;
+}
+
+.food__button-edit {
+  background-color: var(--primary-color);
+  color: white;
+  width: 178px;
+  height: 40px;
+}
+
+.icon-add-food {
   color: white;
   background-color: var(--primary-color);
+  border-radius: 30px !important;
 }
 
 .active {

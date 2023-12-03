@@ -18,9 +18,16 @@
   text-align: center;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .navigation__item {
   display: flex;
   align-items: center;
+  padding: 12px 12px 12px 24px;
 }
 
 .item__name {

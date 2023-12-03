@@ -9,7 +9,7 @@
       :class="$style.sidebar"
     >
       <span :class="$style.title">Birosca do Açaí</span>
-      <q-list tag="ul" class="navigation">
+      <q-list tag="ul" :class="$style.navigation">
         <q-item
           tag="li"
           :class="$style.navigation__item"
@@ -21,23 +21,42 @@
           </q-item-section>
           <q-item-section :class="$style.item__name"> Comidas </q-item-section>
         </q-item>
-        <q-item tag="li" to="/dashboard/orders" :active-class="$style.active">
-          <q-item-section avatar>
+        <q-item
+          tag="li"
+          :class="$style.navigation__item"
+          to="/dashboard/orders"
+          :active-class="$style.active"
+        >
+          <q-item-section class="item__icon-container" avatar>
             <q-icon name="fas fa-ambulance" />
           </q-item-section>
-          <q-item-section> Pedidos </q-item-section>
+          <q-item-section :class="$style.item__name"> Pedidos </q-item-section>
         </q-item>
-        <q-item tag="li" to="/dashboard/history">
-          <q-item-section avatar>
+        <q-item
+          tag="li"
+          :class="$style.navigation__item"
+          to="/dashboard/history"
+          :active-class="$style.active"
+        >
+          <q-item-section class="item__icon-container" avatar>
             <q-icon name="fas fa-ambulance" />
           </q-item-section>
-          <q-item-section> Histórico </q-item-section>
+          <q-item-section :class="$style.item__name">
+            Histórico
+          </q-item-section>
         </q-item>
-        <q-item tag="li" to="/dashboard/settings">
-          <q-item-section avatar>
+        <q-item
+          tag="li"
+          :class="$style.navigation__item"
+          to="/dashboard/settings"
+          :active-class="$style.active"
+        >
+          <q-item-section class="item__icon-container" avatar>
             <q-icon name="fas fa-ambulance" />
           </q-item-section>
-          <q-item-section> Configurações </q-item-section>
+          <q-item-section :class="$style.item__name">
+            Configurações
+          </q-item-section>
         </q-item>
       </q-list>
       <q-item class="log-out" clickable>
