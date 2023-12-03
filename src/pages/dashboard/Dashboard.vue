@@ -8,7 +8,9 @@
       elevated
       :class="$style.sidebar"
     >
-      <span :class="$style.title">Birosca do Açaí</span>
+      <span :class="[$style.title, miniState ? 'invisible' : '']"
+        >Birosca do Açaí</span
+      >
       <q-list tag="ul" :class="$style.navigation">
         <q-item
           tag="li"
@@ -59,12 +61,23 @@
           </q-item-section>
         </q-item>
       </q-list>
-      <q-item class="log-out" clickable>
+      <q-item :class="$style.logOut" clickable>
         <q-item-section avatar>
           <q-icon name="fas fa-ambulance" />
         </q-item-section>
-        <q-item-section> Sair </q-item-section>
+        <q-item-section :class="$style.logOut__text"> Sair </q-item-section>
       </q-item>
+      <q-page-sticky position="top-right" :offset="[-15, 10]">
+        <q-btn
+          type="button"
+          @click="miniState = !miniState"
+          fab
+          :icon="
+            miniState ? 'fa-solid fa-chevron-right' : 'fa-solid fa-chevron-left'
+          "
+          :class="$style.manipulateMenu"
+        />
+      </q-page-sticky>
     </q-drawer>
     <q-page-container>
       <router-view></router-view>
